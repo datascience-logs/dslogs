@@ -39,4 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.agent
+
+# Agent & AI Metadata
+.agent/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+dslogs-blueprint.md
+.tempmediaStorage/
+
+# OS Files
+.DS_Store
+Thumbs.db
