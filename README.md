@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=3000&pause=500&color=89E900&center=true&vCenter=true&width=600&height=60&lines=Data+Science+Logs" alt="Data Science Logs" />
+</h1>
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/NIGHT-222222?style=for-the-badge&logo=night&logoColor=white" />
+  <img src="https://img.shields.io/badge/KIWI-89E900?style=for-the-badge&logo=kiwi&logoColor=black" />
+</p>
 
-First, run the development server:
+<p align="center">
+  <strong>📊 One code → Everything you need. Free. Forever.</strong>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+  
+# 🟢 DATA SCIENCE LOGS 🟢
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<div align="center">
+  <pre style="background: #222; color: #89E900; font-size: 1.2rem; padding: 1rem; border-radius: 12px;">
+  ██████╗ ███████╗██╗      ██████╗  ██████╗ ███████╗
+  ██╔══██╗██╔════╝██║     ██╔═══██╗██╔════╝ ██╔════╝
+  ██║  ██║███████╗██║     ██║   ██║██║  ███╗███████╗
+  ██║  ██║╚════██║██║     ██║   ██║██║   ██║╚════██║
+  ██████╔╝███████║███████╗╚██████╔╝╚██████╔╝███████║
+  ╚═════╝ ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝
+  </pre>
+</div>
 
-## Learn More
+<p align="center">
+  <i>— Master Data Science. Unlocked by Social —</i>
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+<br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="center">
+  <img src="https://img.shields.io/badge/50%2B-Pro%20Resources-89E900?style=flat-square" />
+  <img src="https://img.shields.io/badge/10k%2B-Community-89E900?style=flat-square" />
+  <img src="https://img.shields.io/badge/100%25-Always%20Free-89E900?style=flat-square" />
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center">
+  <strong>🎯 Follow on Instagram → Get daily codes → Unlock instantly</strong>
+</p>
