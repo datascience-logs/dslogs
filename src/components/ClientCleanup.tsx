@@ -1,0 +1,25 @@
+'use client';
+
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
+export default function ClientCleanup() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Reset all UI overlays on route change
+    const cleanup = () => {
+      // Force hide mobile menu
+      document.body.classList.remove('menu-open');
+      // Clear any stuck modals via event
+      window.dispatchEvent(new CustomEvent('dslogs:reset-ui'));
+    };
+    cleanup();
+    
+    // Safety: Reset every 10s if something is stuck
+    const timer = setInterval(cleanup, 10000);
+    return () => clearInterval(timer);
+  }, [pathname]);
+
+  return null;
+}
