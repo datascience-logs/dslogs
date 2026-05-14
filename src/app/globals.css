@@ -61,6 +61,11 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+.main-content {
+  padding-top: 80px; /* Space for fixed navbar */
+  min-height: calc(100vh - 80px);
   -webkit-font-smoothing: antialiased;
 }
 a { text-decoration: none; color: inherit; }

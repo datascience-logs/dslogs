@@ -21,14 +21,9 @@ export default function Navbar() {
 
   useEffect(() => {
     if (menuOpen) {
-      const timer = setTimeout(() => setMenuOpen(false), 5000);
       const onReset = () => setMenuOpen(false);
       window.addEventListener('dslogs:reset-ui', onReset);
-      
-      return () => {
-        clearTimeout(timer);
-        window.removeEventListener('dslogs:reset-ui', onReset);
-      };
+      return () => window.removeEventListener('dslogs:reset-ui', onReset);
     }
   }, [menuOpen]);
 

@@ -45,7 +45,7 @@ export default function RootLayout({
         <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         <ClientCleanup />
         <Navbar />
-        <main style={{ flex: 1 }}>
+        <main className="main-content" style={{ flex: 1 }}>
           {children}
         </main>
         <Footer />

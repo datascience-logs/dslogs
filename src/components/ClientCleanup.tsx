@@ -15,10 +15,6 @@ export default function ClientCleanup() {
       window.dispatchEvent(new CustomEvent('dslogs:reset-ui'));
     };
     cleanup();
-    
-    // Safety: Reset every 10s if something is stuck
-    const timer = setInterval(cleanup, 10000);
-    return () => clearInterval(timer);
   }, [pathname]);
 
   return null;

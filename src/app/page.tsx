@@ -127,14 +127,9 @@ export default function Home() {
 
   useEffect(() => {
     if (modal) {
-      const timer = setTimeout(() => setModal(null), 5000);
       const onReset = () => setModal(null);
       window.addEventListener('dslogs:reset-ui', onReset);
-
-      return () => {
-        clearTimeout(timer);
-        window.removeEventListener('dslogs:reset-ui', onReset);
-      };
+      return () => window.removeEventListener('dslogs:reset-ui', onReset);
     }
   }, [modal]);
 
@@ -357,7 +352,7 @@ export default function Home() {
       </div>
 
       <style jsx>{`
-        .hero-section { padding-top: 80px; }
+        .hero-section { }
         .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
         .hero-visual { position: relative; }
         .terminal-card { background: var(--night-hard); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-kiwi-lg); }

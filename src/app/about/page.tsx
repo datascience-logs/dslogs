@@ -7,7 +7,7 @@ import { SITE } from '@/lib/constants';
 
 export default function AboutPage() {
   return (
-    <div className="about-page" style={{paddingTop: 100}}>
+    <div className="about-page">
       <div className="container">
         {/* Header */}
         <div className="about-header">

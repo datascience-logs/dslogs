@@ -22,14 +22,9 @@ export default function SearchBox({ onToast }: { onToast?: (msg: string, type: '
 
   useEffect(() => {
     if (status !== 'idle') {
-      const timer = setTimeout(() => setStatus('idle'), 5000);
       const onReset = () => setStatus('idle');
       window.addEventListener('dslogs:reset-ui', onReset);
-
-      return () => {
-        clearTimeout(timer);
-        window.removeEventListener('dslogs:reset-ui', onReset);
-      };
+      return () => window.removeEventListener('dslogs:reset-ui', onReset);
     }
   }, [status]);
 
