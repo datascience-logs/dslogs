@@ -13,60 +13,75 @@ export type Resource = {
 export const resources: Resource[] = [
   {
     id: '1',
-    title: 'SQL Joins Cheat Sheet',
-    excerpt: 'Master Inner, Left, Right, and Full joins with visual diagrams and code snippets.',
+    title: 'Google AI Agents Course (5-Day)',
+    excerpt: 'Access Google\'s free professional course on building autonomous AI agents and intelligent systems.',
     content: `
-# SQL Joins Cheat Sheet
+# Google AI Agents Course (5-Day)
 
-SQL joins are used to combine rows from two or more tables, based on a related column between them.
+Google has released a comprehensive 5-day course focused on AI Agents. This resource includes links to the official modules and my personal study notes.
 
-## 1. INNER JOIN
-Returns records that have matching values in both tables.
-\`\`\`sql
-SELECT orders.OrderID, customers.CustomerName
-FROM orders
-INNER JOIN customers ON orders.CustomerID = customers.CustomerID;
-\`\`\`
+## What you will learn:
+- Fundamentals of AI Agents
+- Building autonomous systems
+- Integrating Google AI models
+- Real-world deployment projects
 
-## 2. LEFT JOIN
-Returns all records from the left table, and the matched records from the right table.
-\`\`\`sql
-SELECT customers.CustomerName, orders.OrderID
-FROM customers
-LEFT JOIN orders ON customers.CustomerID = orders.CustomerID;
-\`\`\`
-
-## 3. RIGHT JOIN
-Returns all records from the right table, and the matched records from the left table.
-
-## 4. FULL JOIN
-Returns all records when there is a match in either left or right table.
+[Access Official Course →](https://cloud.google.com/blog/topics/training-certifications/free-google-ai-training-courses)
     `,
     code: 'Dslogs-001',
-    category: 'SQL',
-    date: '2024-05-10',
-    instagram_url: 'https://instagram.com/p/12345',
-    pdf_url: '/files/sql-joins.pdf'
+    category: 'ML',
+    date: '2024-05-14',
+    instagram_url: 'https://www.instagram.com/p/C6_...',
   },
   {
     id: '2',
-    title: 'Pandas Data Cleaning Guide',
-    excerpt: 'Learn how to handle missing values, duplicates, and data types in Python Pandas.',
-    content: '# Pandas Data Cleaning Guide...',
+    title: 'Data Science Roadmap 2026',
+    excerpt: 'The most realistic and structured roadmap for B.Tech students to master Data Science by 2026.',
+    content: `
+# Data Science Roadmap 2026
+
+Stop wandering YouTube playlists. This roadmap is built by a student for students.
+
+## Phase 1: Python & Math
+- NumPy, Pandas, Matplotlib
+- Probability & Linear Algebra
+
+## Phase 2: Data Analysis
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+
+## Phase 3: Machine Learning
+- Supervised vs Unsupervised
+- Model Evaluation
+
+## Phase 4: Real-world Projects
+- Portfolio building
+- Deployment basics
+    `,
     code: 'Dslogs-002',
-    category: 'Python',
-    date: '2024-05-08',
-    instagram_url: 'https://instagram.com/p/23456'
+    category: 'Career',
+    date: '2024-05-14',
+    instagram_url: 'https://www.instagram.com/p/C7_...',
   },
   {
     id: '3',
-    title: 'Data Science Interview Prep',
-    excerpt: 'Top 20 questions asked in data science interviews at top tech companies.',
-    content: '# Data Science Interview Prep...',
+    title: '5 Future AI Projects (2026)',
+    excerpt: 'A curated list of high-impact AI projects that will dominate the job market in 2026.',
+    content: `
+# 5 Future AI Projects (2026)
+
+These are NOT beginner copy-paste projects. These are designed to showcase real impact.
+
+1. **Multi-Agent RAG System**: Specialized knowledge retrieval.
+2. **Autonomous Coding Assistant**: Domain-specific code generation.
+3. **AI-Powered Logistics Optimizer**: Real-time graph optimization.
+4. **Predictive Health Analytics**: Time-series on wearable data.
+5. **Real-time Video Synthesis**: Generative UI/UX.
+    `,
     code: 'Dslogs-003',
-    category: 'Career',
-    date: '2024-05-05',
-    instagram_url: 'https://instagram.com/p/34567'
+    category: 'ML',
+    date: '2024-05-14',
+    instagram_url: 'https://www.instagram.com/p/C8_...',
   }
 ];
 

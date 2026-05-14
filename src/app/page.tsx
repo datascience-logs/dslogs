@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import SearchBox from '@/components/SearchBox';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Database, Cpu, Globe, Copy, Check, ExternalLink, Heart, X } from 'lucide-react';
 import { SITE } from '@/lib/constants';
@@ -56,9 +57,24 @@ function useReveal() {
 
 // ── Resource Modal ───────────────────────────────────────────
 const RESOURCES = [
-  { code: 'Dslogs-001', title: 'SQL Joins Cheat Sheet', cat: 'SQL', content: '## SQL Joins\n\n**INNER JOIN** – Returns rows with matches in both tables.\n```sql\nSELECT * FROM a INNER JOIN b ON a.id = b.id;\n```\n\n**LEFT JOIN** – All rows from left + matches from right.\n```sql\nSELECT * FROM a LEFT JOIN b ON a.id = b.id;\n```\n\n**FULL OUTER JOIN** – All rows from both tables.\n```sql\nSELECT * FROM a FULL OUTER JOIN b ON a.id = b.id;\n```' },
-  { code: 'Dslogs-002', title: 'Pandas Quick Guide', cat: 'Python', content: '## Pandas Essentials\n\n**Load Data**\n```python\nimport pandas as pd\ndf = pd.read_csv("data.csv")\n```\n\n**Explore**\n```python\ndf.head()     # first 5 rows\ndf.info()     # dtypes & nulls\ndf.describe() # stats summary\n```\n\n**Filter**\n```python\ndf[df["age"] > 25]\n```' },
-  { code: 'Dslogs-003', title: 'ML Model Checklist', cat: 'ML', content: '## ML Model Checklist\n\n1. Define the problem (classification/regression?)\n2. Collect & clean data\n3. EDA – distributions, correlations\n4. Feature engineering\n5. Train/val/test split (70/15/15)\n6. Baseline model\n7. Hyperparameter tuning\n8. Evaluate (F1, AUC, RMSE)\n9. Interpret results\n10. Deploy & monitor' },
+  { 
+    code: 'Dslogs-001', 
+    title: 'Google AI Agents Course (5-Day)', 
+    cat: 'ML', 
+    content: '## Google AI Agents Course\n\n**Official Google Training** – Learn to build autonomous AI systems.\n\n**Modules Included**\n1. AI Agent Fundamentals\n2. Autonomous Frameworks\n3. Portfolio Projects\n\n[Access Official Course →](https://cloud.google.com/blog/topics/training-certifications/free-google-ai-training-courses)' 
+  },
+  { 
+    code: 'Dslogs-002', 
+    title: 'Data Science Roadmap 2026', 
+    cat: 'Career', 
+    content: '## Data Science Roadmap 2026\n\n**B.Tech Focus** – Structured path for university students.\n\n**Phases**\n1. Python & Statistics (Months 1-3)\n2. SQL & EDA (Months 4-6)\n3. Machine Learning (Months 7-12)\n4. Real Projects & Deployment' 
+  },
+  { 
+    code: 'Dslogs-003', 
+    title: '5 Future AI Projects (2026)', 
+    cat: 'ML', 
+    content: '## 5 Future AI Projects\n\n**Not for Beginners** – Production-grade projects that impress recruiters.\n\n**The List**\n1. Multi-Agent RAG System\n2. Autonomous Coding Assistant\n3. AI Logistics Optimizer\n4. Predictive Health Analytics\n5. Real-time Video Synthesis' 
+  },
 ];
 
 function Modal({ res, onClose, onToast }: { res: typeof RESOURCES[0]; onClose: ()=>void; onToast: (m:string,t:'success'|'error')=>void }) {
@@ -145,9 +161,27 @@ export default function Home() {
   const toggleHeart = (i: number) => setHearts(h => ({...h,[i]:!h[i]}));
 
   const instaPosts = [
-    { code:'Dslogs-001', caption:'SQL Joins explained in 60 seconds! Unlock the full cheat sheet with this code 🔥', likes:842, resource: RESOURCES[0] },
-    { code:'Dslogs-002', caption:'Pandas is the backbone of data science. Get the complete quick-reference guide!', likes:1204, resource: RESOURCES[1] },
-    { code:'Dslogs-003', caption:'Before you train any ML model, run through this 10-point checklist. No more rookie mistakes!', likes:976, resource: RESOURCES[2] },
+    { 
+      code:'Dslogs-001', 
+      caption:'GOOGLE’S FREE 5-DAY AI AGENTS COURSE', 
+      likes:15000, 
+      img: '/insta/insta-1.jpg',
+      resource: RESOURCES[0] 
+    },
+    { 
+      code:'Dslogs-002', 
+      caption:'Stop wandering YouTube playlists. Here’s the Data Science Roadmap for Students in 2026 — structured, realistic, and built by a B.Tech student for B.Tech students.', 
+      likes:12400, 
+      img: '/insta/insta-2.jpg',
+      resource: RESOURCES[1] 
+    },
+    { 
+      code:'Dslogs-003', 
+      caption:'FUTURE AI PROJECTS FOR DATA SCIENCE STUDENTS', 
+      likes:9760, 
+      img: '/insta/insta-3.jpg',
+      resource: RESOURCES[2] 
+    },
   ];
 
   return (
@@ -183,7 +217,7 @@ export default function Home() {
                   <p><span style={{color:'#6B7280'}}>$</span> <span style={{color:'var(--kiwi)'}}>dslogs</span> unlock Dslogs-001</p>
                   <p style={{color:'var(--text-mute)',marginTop:8}}>🔍 Verifying code…</p>
                   <p style={{color:'var(--kiwi)',marginTop:4}}>✅ Access granted!</p>
-                  <p style={{color:'var(--text-b)',marginTop:4}}>📄 Loading: SQL Joins Cheat Sheet</p>
+                  <p style={{color:'var(--text-b)',marginTop:4}}>📄 Loading: Google AI Agents Course</p>
                   <div className="progress-mini">
                     <motion.div initial={{width:0}} animate={{width:'100%'}} transition={{duration:2,delay:1,repeat:Infinity,repeatDelay:2}} className="progress-fill-mini"/>
                   </div>
@@ -244,7 +278,17 @@ export default function Home() {
             {instaPosts.map((p,i) => (
               <div key={i} className={`insta-card card reveal reveal-d${i+1}`}>
                 <div className="insta-img">
-                  <span style={{fontSize:'3rem',opacity:0.15}}>📸</span>
+                  {p.img ? (
+                    <Image 
+                      src={p.img} 
+                      alt={p.caption} 
+                      fill 
+                      style={{objectFit:'cover'}}
+                      className="insta-pic"
+                    />
+                  ) : (
+                    <span style={{fontSize:'3rem',opacity:0.15}}>📸</span>
+                  )}
                 </div>
                 <div className="insta-body">
                   <p style={{fontSize:'0.9rem',color:'var(--text-b)',marginBottom:16,lineHeight:1.6}}>{p.caption}</p>
@@ -378,7 +422,9 @@ export default function Home() {
 
         .insta-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
         .insta-card { overflow: hidden; }
-        .insta-img { aspect-ratio: 1; background: var(--night-hard); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); }
+        .insta-img { aspect-ratio: 1; background: var(--night-hard); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+        .insta-pic { transition: transform 0.5s ease; }
+        .insta-card:hover .insta-pic { transform: scale(1.05); }
         .insta-body { padding: 24px; }
         .insta-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 
